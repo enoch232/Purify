@@ -1,8 +1,6 @@
 # Purify
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/purify`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to Purify! There are times when you want to mask inappropriate words with asterisks, and this gem will take care of that. Now with this simple and extremely light gem, you do not have to manually replace the words with asterisks.
 
 ## Installation
 
@@ -22,8 +20,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
-
+ In order to blacklist words, you just call:
+ ```ruby
+ Purify::purify("bad", "word")
+ ```
+ After blacklisting, you can apply onto any strings you want, by:
+ ```ruby
+ #this will change the string to "This string contains a *** ****"
+ "This string contains a bad word".purify
+ 
+ ```
+ Very simple, right?
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
